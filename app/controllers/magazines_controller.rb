@@ -2,7 +2,7 @@ class MagazinesController < ApplicationController
 
     def index
         magazines = Magazine.all
-        render json: magazines
+        render json: magazines, include: :articles
     end
 
 end
